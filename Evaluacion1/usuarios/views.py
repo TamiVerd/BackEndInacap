@@ -16,3 +16,4 @@ def registro(request):
 
 def perfil(request):
     return render(request, 'usuarios/perfil.html')
+
