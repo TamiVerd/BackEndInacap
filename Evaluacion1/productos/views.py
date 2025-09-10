@@ -1,5 +1,8 @@
 from django.shortcuts import render
 
+def bienvenida(request):
+    return render(request, 'productos/bienvenida.html')
+
 def index(request):
     # Diccionario de datos de productos
     productos = [
