@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
+
 def bienvenida(request):
     return render(request, 'productos/bienvenida.html')
 
@@ -45,7 +46,7 @@ from django.shortcuts import render, get_object_or_404
 
 def detalle_producto(request, producto_id):
     productos = [
-        # ... (la misma lista de diccionarios de arriba)
+        
     ]
     # Busca el producto por su 'id' en la lista
     producto_encontrado = None
