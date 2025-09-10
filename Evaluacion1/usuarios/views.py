@@ -12,7 +12,7 @@ def registro(request):
     else:
         form = UserCreationForm()
     
-    return render(request, 'usuarios/registro.html', {'form': form})
+    return render(request, 'usuarios/registrousuario.html', {'form': form})
 
 def perfil(request):
     return render(request, 'usuarios/perfil.html')

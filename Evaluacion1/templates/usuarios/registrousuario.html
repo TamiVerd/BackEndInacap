@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+
+{% block title %}Crear una Cuenta{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil - Mi Tienda</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .profile-nav .nav-link.active {
+            background-color: #0d6efd !important;
+            color: white !important;
+        }
+        .profile-nav .nav-link {
+            color: #343a40;
+            font-weight: 500;
+        }
+        .profile-nav .nav-link i {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold text-primary" href="#">MiTienda</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold" aria-current="page" href="#"><i class="bi bi-person-circle"></i> Mi Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-cart3"></i> Carrito <span class="badge bg-danger rounded-pill">3</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+
+        <div class="row">
+
+            <div class="col-lg-4">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body text-center">
+                        <img src="https://via.placeholder.com/150" alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
+                        <h5 class="my-3">Juan Pérez</h5>
+                        <p class="text-muted mb-1">Cliente Desde: 2024</p>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm">
+                    <div class="card-body p-0 profile-nav">
+                        <div class="list-group list-group-flush">
+                            <a href="#" class="list-group-item list-group-item-action active"><i class="bi bi-person-fill"></i> Mis Datos</a>
+                            <a href="#" class="list-group-item list-group-item-action"><i class="bi bi-box-seam-fill"></i> Historial de Pedidos</a>
+                            <a href="#" class="list-group-item list-group-item-action"><i class="bi bi-geo-alt-fill"></i> Direcciones de Envío</a>
+                            <a href="#" class="list-group-item list-group-item-action"><i class="bi bi-heart-fill"></i> Lista de Deseos</a>
+                            <a href="#" class="list-group-item list-group-item-action text-danger"><i class="bi bi-box-arrow-right"></i> Cerrar Sesión</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-8">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title mb-4">Mis Datos Personales</h4>
+                        <div class="row">
+                            <div class="col-sm-3"><p class="mb-0 fw-medium">Nombre Completo</p></div>
+                            <div class="col-sm-9"><p class="text-muted mb-0">Juan Ignacio Pérez González</p></div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3"><p class="mb-0 fw-medium">Correo</p></div>
+                            <div class="col-sm-9"><p class="text-muted mb-0">juan.perez@example.com</p></div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3"><p class="mb-0 fw-medium">Teléfono</p></div>
+                            <div class="col-sm-9"><p class="text-muted mb-0">(+56) 9 1234 5678</p></div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3"><p class="mb-0 fw-medium">Dirección Principal</p></div>
+                            <div class="col-sm-9"><p class="text-muted mb-0">Av. Siempre Viva 742, Santiago, Chile</p></div>
+                        </div>
+                        <div class="mt-4">
+                            <button class="btn btn-primary">Editar Perfil</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h4 class="card-title mb-4">Historial de Pedidos Recientes</h4>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-0">Pedido #2025-09A1</h6>
+                                    <small class="text-muted">Fecha: 01/09/2025</small>
+                                </div>
+                                <span class="badge bg-success rounded-pill">Entregado</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-0">Pedido #2025-08B5</h6>
+                                    <small class="text-muted">Fecha: 15/08/2025</small>
+                                </div>
+                                <span class="badge bg-success rounded-pill">Entregado</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-0">Pedido #2025-07C2</h6>
+                                    <small class="text-muted">Fecha: 22/07/2025</small>
+                                </div>
+                                <span class="badge bg-danger rounded-pill">Cancelado</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
+{% endblock %}
