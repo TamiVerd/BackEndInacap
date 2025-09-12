@@ -2,6 +2,75 @@
 {% block title %}Mi Perfil{% endblock %}
 
 {% block content %}
+<<<<<<< Updated upstream
     <h1 class="my-4 text-center">Página de Perfil de Usuario</h1>
     <p class="text-center">¡Bienvenido a tu perfil!</p>
 {% endblock %}
+=======
+<!DOCTYPE html>
+{% comment %}
+Este es el template para la página de perfil.
+Solo debe ser accesible para usuarios que han iniciado sesión.
+{% endcomment %}
+
+<div class="container mt-5 mb-5">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-10">
+            <div class="card shadow-sm">
+                <div class="card-header bg-light">
+                    <h3 class="text-center mb-0">Mi Perfil</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4 text-center border-end">
+                            <img src="https://i.imgur.com/bDLhKj3.png" class="img-fluid rounded-circle mb-3" width="150">
+                            <h4>{{ user.username }}</h4>
+                            <p class="text-muted">Cliente</p>
+                        </div>
+
+                        <div class="col-md-8">
+                            <div class="px-3">
+                                <h4>Información de la Cuenta</h4>
+                                <hr>
+                                <div class="row mt-3">
+                                    <div class="col-sm-4">
+                                        <h6 class="mb-0 fw-bold">Nombre de usuario:</h6>
+                                    </div>
+                                    <div class="col-sm-8 text-secondary">
+                                        {{ user.username }}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <h6 class="mb-0 fw-bold">Correo Electrónico:</h6>
+                                    </div>
+                                    <div class="col-sm-8 text-secondary">
+                                        {{ user.email }}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <h6 class="mb-0 fw-bold">Usuario desde:</h6>
+                                    </div>
+                                    <div class="col-sm-8 text-secondary">
+                                        {{ user.date_joined|date:"d F, Y" }}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <a class="btn btn-primary" href="#">Editar Perfil</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+>>>>>>> Stashed changes
